@@ -6,9 +6,10 @@ var recu = (num) => {
   $.ajax({
     url: alea,
     success: function (respuesta) {
+      valor = respuesta;
       $("#imagen" + num).attr("src", respuesta.image);
       $("#titulo" + num).html(respuesta.name);
-      $("#especie" + num).html(respuesta.especies);
+      $("#especie" + num).html(respuesta.species);
       $("#tipo" + num).html(respuesta.type);
       $("#genero" + num).html(respuesta.gender);
     },
